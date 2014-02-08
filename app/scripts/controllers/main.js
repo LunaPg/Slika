@@ -1,16 +1,17 @@
 'use strict';
 
 angular.module('myphotosApp')
-  .controller('MainCtrl', function ($scope) {
+  .controller('MainCtrl', function ($scope, $http) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
       'Karma'
     ];
-		$scope.images = [
-		{name : '1.jpg'},
-		{name : '2.jpg'},
-		{name : '3.jpg'},
-		{name : '4.jpg'},
-		];
+		$http({
+			url: '/api/2014',
+			method: 'GET'
+			}).success(function(data, status, headers, config){
+				$scope.year = 2014;
+				$scope.images = data
+				});
   });
