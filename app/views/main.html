@@ -12,9 +12,9 @@
 	<img src="images/yeoman.png" alt="I'm Yeoman"><br>
 	<ul>
 		<li ng-repeat="image in images">
-			<img src="images/{{year}}/{{image}}">
-			</li>
-		</ul>
+			<img ng-src="/preview/{{year}}/{{image}}?dim=200x200"/>
+    </li>
+  </ul>
 </div>
 
 <div class="row marketing">
