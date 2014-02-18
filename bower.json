@@ -1,7 +1,9 @@
 {
   "name": "myphotos",
   "version": "0.0.0",
+	"directory" : "app",
   "dependencies": {
+		"isotope": "1.5",
     "angular": "1.2.6",
     "json3": "~3.2.6",
     "es5-shim": "~2.1.0",
